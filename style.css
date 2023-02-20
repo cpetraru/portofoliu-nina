@@ -6,7 +6,8 @@
 
 body,
 html {
-    background-color: #faeee7;
+    padding: 5px;
+    background-color: #f6adc3;
 }
 
 html,
@@ -49,8 +50,8 @@ html,
 }
 
 .container {
-    width: 100vw;
-    padding: 5px 0px;
+    width: 100%;
+    background-color: #faeee7;
 }
 
 .content {
@@ -61,12 +62,11 @@ html,
 .header {
     height: 50px;
     width: 100%;
-    padding: 15px;
+    padding-top: 25px;
 }
 
 .logo {
     height: 100%;
-    padding: 10px;
     box-sizing: border-box;
     cursor: pointer;
 }
