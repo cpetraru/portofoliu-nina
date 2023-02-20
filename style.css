@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto:wght@400;700&display=swap');
 
+@keyframes slideInFromLeft {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 300px;
+    }
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -46,7 +56,7 @@ html,
     height: 100%;
 }
 
-.welcome,
+#welcome,
 .link a {
     letter-spacing: 0.5px;
     font-size: 25px;
@@ -82,7 +92,7 @@ html,
     margin-left: auto;
     justify-content: space-evenly;
     align-items: center;
-    width: 30%;
+    width: 40%;
     height: 100%;
 }
 
@@ -105,7 +115,8 @@ html,
 }
 
 .link a:hover:after,
-.logo a:hover:after {
+.logo a:hover:after,
+.text-description h1 {
     width: 100%;
 }
 
@@ -129,6 +140,22 @@ html,
     box-sizing: border-box;
 }
 
+.text-description .title {
+    padding-bottom: 25px;
+}
+
+.text-description .title h1 {
+    font-size: 50px;
+}
+
+
+
+
+.text-description p {
+    font-weight: lighter;
+    font-size: 20px;
+}
+
 .cover .photo {
     flex: 1;
     border-radius: 50%;
@@ -142,18 +169,22 @@ html,
     width: 400px;
     object-fit: cover;
     border-radius: 50%;
-    border: 8px dotted #fa709a;
+    border: 1px solid #fa709a;
 }
 
 .projects {
     flex-direction: column;
     gap: 15px;
+    margin-top: 200px;
+}
+
+.projects .projects-title {
+    width: 100%;
 }
 
 .project-grid {
     gap: 15px;
     justify-content: space-between;
-    box-sizing: content-box;
     width: 100%;
 }
 
@@ -163,7 +194,20 @@ html,
     width: 250px;
 }
 
+
 /* transition animation */
+
+.project:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.project:nth-child(3) {
+    transition-delay: 400ms;
+}
+
+.project:nth-child(4) {
+    transition-delay: 600ms;
+}
 
 .hidden {
     opacity: 0;
@@ -176,4 +220,15 @@ html,
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
+}
+
+.cover .photo {
+    transition-delay: 200ms;
+}
+
+.underline {
+    background-color: #fa709a;
+    height: 3px;
+    width: 300px;
+    animation: 1.5s slideInFromLeft;
 }
