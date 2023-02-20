@@ -1,7 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto:wght@400;700&display=swap');
+
+@keyframes slideInFromLeft {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 300px;
+    }
+}
+
+/* ======================================= */
+/* GENERAL STYLES */
+
 * {
     margin: 0px;
     padding: 0px;
-    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+    /* box-sizing: border-box; */
 }
 
 body,
@@ -18,29 +34,37 @@ html,
 .links,
 .link,
 .cover,
-.text-description {
+.text-description,
+.projects,
+.project-grid {
     display: flex;
 }
 
 .body,
 html,
 .container,
-.link {
+.link,
+.projects {
     justify-content: center;
     align-items: center;
 }
+
+/* Header common styles */
 
 .header,
 .logo {
     align-items: center;
 }
 
+
 .container,
 .content {
-    height: 100vh;
+    height: 100%;
 }
 
-.welcome,
+/* Links common styles */
+
+#welcome,
 .link a {
     letter-spacing: 0.5px;
     font-size: 25px;
@@ -49,33 +73,42 @@ html,
     position: relative;
 }
 
+/* ======================================= */
+/* INDIVIDUAL STYLES */
+
+/* Container styles */
 .container {
     width: 100%;
     background-color: #faeee7;
+    padding: 25px 0px 30px 0px;
 }
 
+/* Content styles */
 .content {
     width: 80%;
     flex-direction: column;
 }
 
+/* Header styles */
 .header {
     height: 50px;
     width: 100%;
-    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
+/* Logo styles */
 .logo {
     height: 100%;
     box-sizing: border-box;
     cursor: pointer;
 }
 
+/* Links & logo styles */
 .links {
     margin-left: auto;
     justify-content: space-evenly;
     align-items: center;
-    width: 30%;
+    width: 40%;
     height: 100%;
 }
 
@@ -98,10 +131,12 @@ html,
 }
 
 .link a:hover:after,
-.logo a:hover:after {
+.logo a:hover:after,
+.text-description h1 {
     width: 100%;
 }
 
+/* Cover styles */
 .cover {
     height: 400px;
     width: 100%;
@@ -122,11 +157,25 @@ html,
     box-sizing: border-box;
 }
 
+.text-description .title {
+    padding-bottom: 25px;
+}
+
+.text-description .title h1 {
+    font-size: 50px;
+}
+
+.text-description p {
+    font-weight: lighter;
+    font-size: 20px;
+}
+
 .cover .photo {
     flex: 1;
     border-radius: 50%;
     height: 100%;
     width: 100%;
+
 }
 
 .photo img {
@@ -134,5 +183,77 @@ html,
     width: 400px;
     object-fit: cover;
     border-radius: 50%;
-    border: 8px dotted #fa709a;
+    border: 1px solid #fa709a;
+}
+
+/* Project grid styles */
+
+.projects {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 200px;
+}
+
+.projects .projects-title {
+    width: 100%;
+}
+
+.project-grid {
+    gap: 15px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Project images */
+
+.project,
+.project img {
+    height: 250px;
+    width: 250px;
+}
+
+.project img {
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* ======================================= */
+/* ANIMATIONS */
+
+/* transition animation */
+
+.project:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.project:nth-child(3) {
+    transition-delay: 400ms;
+}
+
+.project:nth-child(4) {
+    transition-delay: 600ms;
+}
+
+.cover .photo {
+    transition-delay: 200ms;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.underline {
+    background-color: #fa709a;
+    height: 3px;
+    width: 300px;
+    animation: 1.5s slideInFromLeft;
 }
