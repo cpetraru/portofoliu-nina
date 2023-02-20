@@ -21,14 +21,17 @@ html,
 .links,
 .link,
 .cover,
-.text-description {
+.text-description,
+.projects,
+.project-grid {
     display: flex;
 }
 
 .body,
 html,
 .container,
-.link {
+.link,
+.projects {
     justify-content: center;
     align-items: center;
 }
@@ -139,6 +142,24 @@ html,
     object-fit: cover;
     border-radius: 50%;
     border: 8px dotted #fa709a;
+}
+
+.projects {
+    flex-direction: column;
+    gap: 15px;
+}
+
+.project-grid {
+    gap: 15px;
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+.project {
+    border: 1px solid black;
+    height: 250px;
+    width: 250px;
 }
 
 /* transition animation */
