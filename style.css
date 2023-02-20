@@ -1,8 +1,13 @@
-body,
-html {
-    background-color: #d9d3d5df;
+* {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    padding: 5px;
+    background-color: #f6adc3;
 }
 
 html,
@@ -45,8 +50,8 @@ html,
 }
 
 .container {
-    width: 100vw;
-    padding: 5px 0px;
+    width: 100%;
+    background-color: #faeee7;
 }
 
 .content {
@@ -57,12 +62,11 @@ html,
 .header {
     height: 50px;
     width: 100%;
-    padding: 15px;
+    padding-top: 25px;
 }
 
 .logo {
     height: 100%;
-    padding: 10px;
     box-sizing: border-box;
     cursor: pointer;
 }
@@ -85,7 +89,7 @@ html,
 .logo a:after {
     content: "";
     position: absolute;
-    background-color: #fa90b0c5;
+    background-color: #fa709a;
     height: 3px;
     width: 0;
     left: 0;
@@ -120,15 +124,15 @@ html,
 
 .cover .photo {
     flex: 1;
-    border: 5px dotted #fa90b0c5;
     border-radius: 50%;
     height: 100%;
     width: 100%;
 }
 
 .photo img {
-    height: 100%;
+    height: 400px;
     width: 400px;
     object-fit: cover;
     border-radius: 50%;
+    border: 8px dotted #fa709a;
 }
