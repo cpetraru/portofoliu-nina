@@ -10,6 +10,9 @@
     }
 }
 
+/* ======================================= */
+/* GENERAL STYLES */
+
 * {
     margin: 0px;
     padding: 0px;
@@ -46,15 +49,20 @@ html,
     align-items: center;
 }
 
+/* Header common styles */
+
 .header,
 .logo {
     align-items: center;
 }
 
+
 .container,
 .content {
     height: 100%;
 }
+
+/* Links common styles */
 
 #welcome,
 .link a {
@@ -65,29 +73,37 @@ html,
     position: relative;
 }
 
+/* ======================================= */
+/* INDIVIDUAL STYLES */
+
+/* Container styles */
 .container {
     width: 100%;
     background-color: #faeee7;
     padding: 25px 0px 30px 0px;
 }
 
+/* Content styles */
 .content {
     width: 80%;
     flex-direction: column;
 }
 
+/* Header styles */
 .header {
     height: 50px;
     width: 100%;
     padding-bottom: 25px;
 }
 
+/* Logo styles */
 .logo {
     height: 100%;
     box-sizing: border-box;
     cursor: pointer;
 }
 
+/* Links & logo styles */
 .links {
     margin-left: auto;
     justify-content: space-evenly;
@@ -120,6 +136,7 @@ html,
     width: 100%;
 }
 
+/* Cover styles */
 .cover {
     height: 400px;
     width: 100%;
@@ -148,9 +165,6 @@ html,
     font-size: 50px;
 }
 
-
-
-
 .text-description p {
     font-weight: lighter;
     font-size: 20px;
@@ -172,6 +186,8 @@ html,
     border: 1px solid #fa709a;
 }
 
+/* Project grid styles */
+
 .projects {
     flex-direction: column;
     gap: 15px;
@@ -188,12 +204,21 @@ html,
     width: 100%;
 }
 
-.project {
-    border: 1px solid black;
+/* Project images */
+
+.project,
+.project img {
     height: 250px;
     width: 250px;
 }
 
+.project img {
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* ======================================= */
+/* ANIMATIONS */
 
 /* transition animation */
 
@@ -209,6 +234,10 @@ html,
     transition-delay: 600ms;
 }
 
+.cover .photo {
+    transition-delay: 200ms;
+}
+
 .hidden {
     opacity: 0;
     filter: blur(5px);
@@ -220,10 +249,6 @@ html,
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
-}
-
-.cover .photo {
-    transition-delay: 200ms;
 }
 
 .underline {
