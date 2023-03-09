@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto:wght@400;700&display=swap");
+
+* {
+  font-family: "Merriweather", serif;
+}
+
+body {
+  background-color: #f6adc3;
+  padding: 2px;
+}
+
+.container {
+  background-color: #faeee7;
+  padding: 10px;
+}
+
+img {
+  max-width: 100%;
+}
